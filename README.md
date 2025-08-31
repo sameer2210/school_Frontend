@@ -13,24 +13,23 @@ pnpm dev
 # or
 bun dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+school-frontend/  # Root project directory (replace with your actual project name)
+├── app/          # App router directory for pages and layouts
+│   ├── addSchool/
+│   │   └── page.tsx  # Form page for adding schools (using react-hook-form and Yup validation)
+│   ├── showSchools/
+│   │   └── page.tsx  # Page to fetch and display schools in a grid (e-commerce style)
+│   ├── globals.css   # Global styles (including Tailwind imports)
+│   ├── layout.tsx    # Root layout with header and navigation
+│   └── page.tsx      # Home page (welcome screen with links)
+├── public/       # Static assets (e.g., images, favicons; add if needed for custom assets)
+│   └── favicon.ico  # Default favicon (optional)
+├── node_modules/ # Installed dependencies (git-ignored)
+├── .gitignore    # Git ignore file (standard Next.js)
+├── next-env.d.ts # TypeScript declarations for Next.js
+├── package-lock.json  # Or yarn.lock if using Yarn
+├── package.json  # Dependencies and scripts
+├── postcss.config.js  # PostCSS config for Tailwind
+├── README.md     # Project documentation (optional)
+├── tailwind.config.js  # Tailwind CSS configuration
+└── tsconfig.json # TypeScript compiler options
