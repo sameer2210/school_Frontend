@@ -1,7 +1,7 @@
 'use client';
 
-import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 
 const schema = yup
@@ -32,7 +32,7 @@ export default function AddSchool() {
 
   const onSubmit = async (data: FormData) => {
     try {
-      const response = await fetch('http://localhost:3000/addSchool', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/addSchool`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),

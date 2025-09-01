@@ -7,7 +7,10 @@ interface School {
 }
 
 async function fetchSchools(): Promise<School[]> {
-  const response = await fetch('http://localhost:3000/showSchools');
+  // const response = await fetch('http://localhost:5000/showSchools');
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/showSchools`, {
+    cache: 'no-store', // ensures fresh data
+  });
   if (!response.ok) {
     throw new Error('Failed to fetch schools');
   }
